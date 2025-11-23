@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -55,7 +54,7 @@ body {
 
 .navigation a:hover {
     background: rgba(255,255,255,0.2);
-    color: yellow;
+    color: rgb(23, 147, 230);
 }
 
 .navigation a.active {
@@ -100,7 +99,7 @@ body {
 }
 
 .side_bar a:hover {
-    color: yellow;
+    color: rgb(23, 147, 230);
 }
 
 
@@ -229,8 +228,10 @@ body {
     color: #e3e8ff;
     position: relative;
     padding-left: 10px;
+    transition: 0.25s ease;
+    border-radius: 8px;
+    padding: 5px 8px 5px 18px;
 }
-
 
 .body_area ul li::before {
     content: "•";
@@ -241,6 +242,13 @@ body {
     text-shadow: 0 0 6px rgba(122,184,255,0.8);
 }
 
+.body_area ul li:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(6px);
+    box-shadow: 0 0 8px rgba(180, 220, 255, 0.25);
+    cursor: pointer;
+}
 
 .body_area h2 {
     font-size: 24px;
@@ -250,3 +258,18 @@ body {
     color: #ffffff;
     letter-spacing: 0.5px;
 }
+
+.side_bar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.25s;
+    font-size: 15px;
+}
+
+.side_bar ul li a:hover {
+    transform: translateX(6px);
+    color: #1db6ff;
+    font-size: 17px;   
+}
+

@@ -4,10 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UTHM – Home</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
+<style>
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(to right, #1b1f3b, #0d1321);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* MAIN CONTAINER */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+.logo img {
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5));
+}
+
+/* NAVIGATION */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    padding: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+.navigation a:hover {
+    background: rgba(255,255,255,0.2);
+    color: rgb(23,147,230);
+}
+
+.navigation a.active {
+    background: rgba(255,255,255,0.35);
+    color: #000;
+    font-weight: 600;
+}
+
+/* CONTENT WRAPPER */
+.content {
+    display: flex;
+    flex: 1;
+    padding: 25px;
+    gap: 25px;
+}
+
+/* SIDEBAR */
+.side_bar {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    flex-basis: 22%;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.side_bar h3 {
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.side_bar ul {
+    list-style: none;
+}
+
+.side_bar li {
+    margin-bottom: 10px;
+}
+
+.side_bar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.25s;
+    font-size: 15px;
+    color: #a8d0ff;
+    text-decoration: none;
+}
+
+.side_bar ul li a:hover {
+    transform: translateX(6px);
+    color: #1db6ff;
+    font-size: 17px;
+}
+
+/* BODY AREA */
+.body_area {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    flex-basis: 75%;
+    border-radius: 12px;
+    line-height: 1.7;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.body_area h1 {
+    font-size: 28px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.body_area p {
+    font-size: 16px;
+    margin-bottom: 18px;
+    color: #d4dcff;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+.footer {
+    background: rgba(255,255,255,0.06);
+    text-align: center;
+    padding: 18px;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+</style>
+
 </head>
+
 <body>
 
 <div class="container">
@@ -21,7 +170,6 @@
         <a href="biodata.html">Biodata</a>
         <a href="hobbies.html">Hobbies</a>
         <a href="campuslife.html">Campus Life</a>
-
     </div>
 
     <div class="content">
@@ -29,47 +177,56 @@
         <div class="side_bar">
             <h3>UTHM Portal</h3>
             <ul>
-                <li><a href="https://ptta.uthm.edu.my" target="_blank">PTTA</a></li>
-                <li><a href="https://fsktm.uthm.edu.my" target="_blank">FSKTM</a></li>
-                <li><a href="https://amo.uthm.edu.my" target="_blank">PPA</a></li>
+                <li><a href="https://ptta.uthm.edu.my" target="_blank">
+                    <span class="material-icons-outlined">local_library</span>PTTA 
+                </a></li>
+
+                <li><a href="https://fsktm.uthm.edu.my" target="_blank">
+                    <span class="material-icons-outlined">computer</span>FSKTM 
+                </a></li>
+
+                <li><a href="https://amo.uthm.edu.my" target="_blank">
+                    <span class="material-icons-outlined">apartment</span>PPA 
+                </a></li>
             </ul>
         </div>
 
         <div class="body_area">
-    <h1>Welcome to My Personal Website</h1>
+            <h1>Welcome to My Personal Website</h1>
 
-    <p>
-        My name is Mohamad Khairul Ikmal, and I’m currently pursuing 
-        Software Engineering at UTHM. This website serves as a small personal profile 
-        where I share information about myself, my interests, and my experience 
-        as a university student.
-    </p>
-    <br>
-    <p>
-        I’ve always been interested in technology and enjoy learning how software, 
-        websites, and systems are designed. This personal site reflects a bit of my 
-        personality, creativity, and the things I enjoy doing.
-    </p>
-    <br>
-    <p>
-        Feel free to browse through the pages to get to know me better!
-    </p>
-</div>
+            <p>
+                My name is Mohamad Khairul Ikmal, and I’m currently pursuing 
+                Software Engineering at UTHM. This website serves as a small personal profile 
+                where I share information about myself, my interests, and my experience 
+                as a university student.
+            </p>
 
+            <br>
+
+            <p>
+                I’ve always been interested in technology and enjoy learning how software, 
+                websites, and systems are designed. This personal site reflects a bit of my 
+                personality, creativity, and the things I enjoy doing.
+            </p>
+
+            <br>
+
+            <p>
+                Feel free to browse through the pages to get to know me better!
+            </p>
+        </div>
 
     </div>
 
     <div class="footer">
-    © 2025 Khairul 
-    &nbsp; | &nbsp; 
-    Phone: <a href="tel:01174566525">011-74566525</a>
-    &nbsp; | &nbsp; 
-    Email: <a href="mailto:ai230070@student.uthm.edu.my">ai230070@student.uthm.edu.my</a>
+        © 2025 Khairul 
+        &nbsp; | &nbsp; 
+        Phone: <a href="tel:01174566525">011-74566525</a>
+        &nbsp; | &nbsp; 
+        Email: <a href="mailto:ai230070@student.uthm.edu.my">ai230070@student.uthm.edu.my</a>
     </div>
 
 </div>
-
-
 
 </body>
 </html>

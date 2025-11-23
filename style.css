@@ -273,3 +273,61 @@ body {
     font-size: 17px;   
 }
 
+.hobby-list li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #e3e8ff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.hobby-icon {
+    font-size: 20px;
+    color: #7ab8ff;
+    transition: 0.25s ease;
+}
+
+.hobby-list li:hover {
+    background: rgba(255,255,255,0.10);
+    transform: translateX(6px);
+    color: #ffffff;
+}
+
+.hobby-list li:hover .hobby-icon {
+    color: #1db6ff;
+    transform: scale(1.25);
+}
+
+.campus-list li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #e3e8ff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.campus-icon {
+    font-size: 20px;
+    color: #7ab8ff;
+    transition: 0.25s ease;
+}
+
+.campus-list li:hover {
+    background: rgba(255,255,255,0.10);
+    transform: translateX(6px);
+    color: #ffffff;
+}
+
+.campus-list li:hover .campus-icon {
+    color: #1db6ff;
+    transform: scale(1.25);
+}

@@ -4,8 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobbies</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(to right, #1b1f3b, #0d1321);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* MAIN CONTAINER */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+.logo img {
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5));
+}
+
+/* NAVIGATION */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    padding: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.navigation a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+.navigation a:hover {
+    background: rgba(255,255,255,0.2);
+    color: rgb(23,147,230);
+}
+.navigation a.active {
+    background: rgba(255,255,255,0.35);
+    color: #000;
+    font-weight: 600;
+}
+
+/* CONTENT */
+.content {
+    display: flex;
+    flex: 1;
+    padding: 25px;
+    gap: 25px;
+}
+
+/* SIDEBAR */
+.side_bar {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    flex-basis: 22%;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.side_bar h3 {
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.side_bar ul {
+    list-style: none;
+}
+
+.side_bar li {
+    margin-bottom: 10px;
+}
+
+.side_bar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.25s;
+    font-size: 15px;
+    color: #a8d0ff;
+    text-decoration: none;
+}
+
+.side_bar ul li a:hover {
+    transform: translateX(6px);
+    color: #1db6ff;
+    font-size: 17px;
+}
+
+/* BODY AREA */
+.body_area {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    flex-basis: 75%;
+    border-radius: 12px;
+    line-height: 1.7;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.body_area h1 {
+    font-size: 28px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+/* HOBBY LIST */
+.hobby-list li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #e3e8ff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.hobby-icon {
+    font-size: 20px;
+    color: #7ab8ff;
+    transition: 0.25s ease;
+}
+
+.hobby-list li:hover {
+    background: rgba(255,255,255,0.10);
+    transform: translateX(6px);
+    color: #ffffff;
+}
+
+.hobby-list li:hover .hobby-icon {
+    color: #1db6ff;
+    transform: scale(1.25);
+}
+
+/* FOOTER */
+.footer {
+    background: rgba(255,255,255,0.06);
+    text-align: center;
+    padding: 18px;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+</style>
 </head>
+
 <body>
 
 <div class="container">
@@ -26,34 +196,42 @@
         <div class="side_bar">
             <h3>UTHM Portal</h3>
             <ul>
-                <li><a href="https://ptta.uthm.edu.my" target="_blank">PTTA</a></li>
-                <li><a href="https://fsktm.uthm.edu.my" target="_blank">FSKTM</a></li>
-                <li><a href="https://amo.uthm.edu.my" target="_blank">PPA</a></li>
+                <li><a href="https://ptta.uthm.edu.my" target="_blank">
+                    <span class="material-icons-outlined">local_library</span>PTTA
+                </a></li>
+
+                <li><a href="https://fsktm.uthm.edu.my" target="_blank">
+                    <span class="material-icons-outlined">computer</span>FSKTM 
+                </a></li>
+
+                <li><a href="https://amo.uthm.edu.my" target="_blank">
+                    <span class="material-icons-outlined">apartment</span>PPA 
+                </a></li>
             </ul>
         </div>
 
         <div class="body_area">
             <h1>My Hobbies</h1>
 
-            <ul>
-                <li>Gaming</li>
-                <li>Watching movies & anime</li>
-                <li>Editing videos</li>
-                <li>Hanging out with friends</li>
-                <li>Learning programming</li>
+            <ul class="hobby-list">
+                <li><span class="material-icons-outlined hobby-icon">sports_esports</span>Gaming</li>
+                <li><span class="material-icons-outlined hobby-icon">movie</span>Watching movies & anime</li>
+                <li><span class="material-icons-outlined hobby-icon">content_cut</span>Editing videos</li>
+                <li><span class="material-icons-outlined hobby-icon">group</span>Hanging out with friends</li>
+                <li><span class="material-icons-outlined hobby-icon">computer</span>Learning programming</li>
             </ul>
+
         </div>
 
     </div>
 
     <div class="footer">
-    © 2025 Khairul 
-    &nbsp; | &nbsp; 
-    Phone: <a href="tel:01174566525">011-74566525</a>
-    &nbsp; | &nbsp; 
-    Email: <a href="mailto:ai230070@student.uthm.edu.my">ai230070@student.uthm.edu.my</a>
+        © 2025 Khairul 
+        &nbsp; | &nbsp; 
+        Phone: <a href="tel:01174566525">011-74566525</a>
+        &nbsp; | &nbsp; 
+        Email: <a href="mailto:ai230070@student.uthm.edu.my">ai230070@student.uthm.edu.my</a>
     </div>
-
 
 </div>
 

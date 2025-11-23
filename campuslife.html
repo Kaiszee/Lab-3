@@ -4,18 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Life</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+<style>
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* BODY */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(to right, #1b1f3b, #0d1321);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* STRUCTURE */
+.container { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* LOGO */
+.logo { display: flex; justify-content: center; padding: 25px 0; }
+.logo img { filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5)); }
+
+/* NAVIGATION */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    padding: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.navigation a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.navigation a:hover {
+    background: rgba(255,255,255,0.2);
+    color: rgb(23,147,230);
+}
+.navigation a.active {
+    background: rgba(255,255,255,0.35);
+    color: #000;
+    font-weight: 600;
+}
+
+/* MAIN CONTENT */
+.content { display: flex; flex: 1; padding: 25px; gap: 25px; }
+
+/* SIDEBAR */
+.side_bar {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    flex-basis: 22%;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+}
+.side_bar h3 { margin-bottom: 12px; }
+.side_bar ul { list-style: none; }
+.side_bar li { margin-bottom: 10px; }
+
+.side_bar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #a8d0ff;
+    text-decoration: none;
+    transition: 0.25s;
+    font-size: 15px;
+}
+.side_bar ul li a:hover {
+    color: #1db6ff;
+    transform: translateX(6px);
+    font-size: 17px;
+}
+
+/* BODY AREA */
+.body_area {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    flex-basis: 75%;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    line-height: 1.7;
+}
+.body_area h1 {
+    font-size: 28px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+.body_area p {
+    font-size: 16px;
+    margin-bottom: 18px;
+    color: #d4dcff;
+}
+
+/* CAMPUS LIST */
+.campus-list li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #e3e8ff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+.campus-icon {
+    font-size: 20px;
+    color: #7ab8ff;
+    transition: 0.25s;
+}
+.campus-list li:hover {
+    background: rgba(255,255,255,0.10);
+    transform: translateX(6px);
+    color: #ffffff;
+}
+.campus-list li:hover .campus-icon {
+    color: #1db6ff;
+    transform: scale(1.25);
+}
+
+/* GALLERY */
+.social-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.post {
+    background: rgba(255,255,255,0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: 0.3s;
+}
+.post:hover { transform: translateY(-6px); }
+
+.post-title {
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #dbe4ff;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.post-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.post-body { padding: 14px; }
+.post-body p { margin: 0; font-size: 14px; }
+
+/* FOOTER */
+.footer {
+    background: rgba(255,255,255,0.06);
+    text-align: center;
+    padding: 18px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    letter-spacing: 1px;
+}
+</style>
+
 </head>
 <body>
 
 <div class="container">
 
-    
     <div class="logo">
         <img src="images/4e732ced3463d06de0ca9a15b6153677.png" width="250">
     </div>
 
-    
     <div class="navigation">
         <a href="index.html">Home</a>
         <a href="biodata.html">Biodata</a>
@@ -25,17 +193,23 @@
 
     <div class="content">
 
-        
         <div class="side_bar">
             <h3>UTHM Portal</h3>
             <ul>
-                <li><a href="https://ptta.uthm.edu.my" target="_blank">PTTA</a></li>
-                <li><a href="https://fsktm.uthm.edu.my" target="_blank">FSKTM</a></li>
-                <li><a href="https://amo.uthm.edu.my" target="_blank">PPA</a></li>
+                <li><a href="https://ptta.uthm.edu.my" target="_blank">
+                    <span class="material-icons-outlined sidebar-icon">local_library</span>PTTA 
+                </a></li>
+
+                <li><a href="https://fsktm.uthm.edu.my" target="_blank">
+                    <span class="material-icons-outlined sidebar-icon">computer</span>FSKTM 
+                </a></li>
+
+                <li><a href="https://amo.uthm.edu.my" target="_blank">
+                    <span class="material-icons-outlined sidebar-icon">apartment</span>PPA 
+                </a></li>
             </ul>
         </div>
 
-       
         <div class="body_area">
             <h1>My Campus Life</h1>
 
@@ -43,106 +217,79 @@
                 I participated in campus programs, group work, study sessions,
                 and met many friends during my journey.</p>
 
-            <ul>
-                <li>Joined FSKTM events</li>
-                <li>Group study sessions</li>
-                <li>Hanging out at cafes</li>
-                <li>Workshops & seminars</li>
+            <ul class="campus-list">
+
+                <li>
+                    <span class="material-icons-outlined campus-icon">celebration</span>
+                    Joined FSKTM events
+                </li>
+
+                <li>
+                    <span class="material-icons-outlined campus-icon">groups</span>
+                    Group study sessions
+                </li>
+
+                <li>
+                    <span class="material-icons-outlined campus-icon">local_cafe</span>
+                    Hanging out at cafes
+                </li>
+
+                <li>
+                    <span class="material-icons-outlined campus-icon">school</span>
+                    Workshops & seminars
+                </li>
+
             </ul>
 
             <h2>Campus Gallery</h2>
 
-<div class="social-gallery">
+            <div class="social-gallery">
 
-    
-    <div class="post">
+                <div class="post">
+                    <div class="post-title">Study Session</div>
+                    <img src="images/image1.png" class="post-img">
+                    <div class="post-body"><p>Focused study in lecture hall ⚡</p></div>
+                </div>
 
-        <div class="post-title">Study Session</div>
+                <div class="post">
+                    <div class="post-title">UTHM Cafe</div>
+                    <img src="images/image2.png" class="post-img">
+                    <div class="post-body"><p>Chilling at UTHM Cafe ☕</p></div>
+                </div>
 
-        <img src="images/image1.png" class="post-img">
+                <div class="post">
+                    <div class="post-title">Hang out with Friends</div>
+                    <img src="images/image3.png" class="post-img">
+                    <div class="post-body"><p>relaxing break away before heading back to campus 🌿✨</p></div>
+                </div>
 
-        <div class="post-body">
-            <p>Focused study in lecture hall ⚡</p>
-        </div>
+                <div class="post">
+                    <div class="post-title">UTHM Event • DSI</div>
+                    <img src="images/image4.png" class="post-img">
+                    <div class="post-body"><p>Attending an UTHM event — full house 🔥</p></div>
+                </div>
 
-    </div>
+                <div class="post">
+                    <div class="post-title">Competition • DINS</div>
+                    <img src="images/image5.png" class="post-img">
+                    <div class="post-body"><p>Winning moment — hard work paid off 🏆📄✨</p></div>
+                </div>
 
-    
-    <div class="post">
+                <div class="post">
+                    <div class="post-title">LEED25 • LokChill</div>
+                    <img src="images/image6.png" class="post-img">
+                    <div class="post-body"><p>Running our LokChill booth 🍢🔥</p></div>
+                </div>
 
-        <div class="post-title">UTHM Cafe</div>
-
-        <img src="images/image2.png" class="post-img">
-
-        <div class="post-body">
-            <p>Chilling at UTHM Cafe ☕</p>
-        </div>
-
-    </div>
-
-    
-    <div class="post">
-
-        <div class="post-title">Hang out with Friends</div>
-
-        <img src="images/image3.png" class="post-img">
-
-        <div class="post-body">
-            <p>relaxing break away from class before heading back to campus 🌿✨</p>
-        </div>
-
-    </div>
-
-    <div class="post">
-
-        <div class="post-title">UTHM Event • Dewan Sultan Ibrahim</div>
-
-        <img src="images/image4.png" class="post-img">
-
-        <div class="post-body">
-            <p>Attending an UTHM student event at DSI — full house and full energy 🔥</p>
-        </div>
-
-    </div>
-
-    <div class="post">
-
-        <div class="post-title">Competition • DINS</div>
-
-        <img src="images/image5.png" class="post-img">
-
-        <div class="post-body">
-            <p>Winning moment with the team — bringing home awards after all the hard work 🏆📄✨</p>
-        </div>
-
-    </div>
-
-
-    <div class="post">
-
-        <div class="post-title">LEED25 • LokChill Booth</div>
-
-        <img src="images/image6.png" class="post-img">
-
-        <div class="post-body">
-            <p>Running our LokChill booth together — teamwork, fun, and good vibes all day 🍢🔥</p>
-        </div>
-
-    </div>
-
-</div>
-
+            </div>
 
         </div>
 
     </div>
 
-   
     <div class="footer">
-        © 2025 Khairul 
-        &nbsp; | &nbsp; 
-        Phone: <a href="tel:01174566525">011-74566525</a>
-        &nbsp; | &nbsp; 
+        © 2025 Khairul |
+        Phone: <a href="tel:01174566525">011-74566525</a> |
         Email: <a href="mailto:ai230070@student.uthm.edu.my">ai230070@student.uthm.edu.my</a>
     </div>
 
